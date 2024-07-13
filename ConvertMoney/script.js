@@ -6,12 +6,20 @@ const currencySelectConvert = document.querySelector(".currency-to-convert")
 function valueToConvert(){
     const inputCurrencyValue = document.querySelector("#input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
+    const currencyValueConverted = document.querySelector(".currency-value")
+
+    const dolarToday = 5.2
+    const euroToday = 6.2
+    const libraToday = 7.02
+    const bitcoinToday = 308534.42
+    const realToday = 1.00
 
     if(currencySelectConvert.value == "dolar"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
             style:"currency",
             currency:"USD"
         }).format(inputCurrencyValue)
+
     }
     if(currencySelectConvert.value == "euro"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
@@ -67,7 +75,7 @@ function changeValueToConvert() {
     valueToConvert()
 }
 
-
+convertButton.addEventListener("click", valueToConvert)
 currencySelectConvert.addEventListener("change", changeValueToConvert, valueToConvert)
 
 
@@ -78,7 +86,6 @@ function convertValues(){
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
     const currencyValueConverted = document.querySelector(".currency-value")
     
-    console.log(currencySelect.value)
     const dolarToday = 5.2
     const euroToday = 6.2
     const libraToday = 7.02
@@ -89,7 +96,7 @@ function convertValues(){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style:"currency",
             currency:"USD"
-        }).format(inputCurrencyValue / dolarToday)
+        }).format(inputCurrencyValue/ dolarToday)
     }
 
     if(currencySelect.value == "euro") {
@@ -117,10 +124,6 @@ function convertValues(){
         }).format(inputCurrencyValue / realToday)
     }
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style:"currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue)
 }
 
 
