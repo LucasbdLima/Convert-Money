@@ -16,7 +16,7 @@
         <img id="logo-image" src="https://s3-alpha-sig.figma.com/img/0b85/5c3c/ee7fbceab7a89831e6096fe140b43ca9?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TXVJpPSU8vG03m73GM0h2z~B-cfl48zCwI00oXrt1tungakd6rwa6xIB4tLP3hvb3EIuLDytnvZ8JuYrdUDr0LpdKi2n4HM4TfFNWZhLtA3R1vMuxcaD7ZM6KGrKp9IBK6RNPS8jvkL5K39ux~G~4FK2V2PdnFQf21b3DPYT53kv2dgqKX6eYNIAM8porLb9O-77OHLlJbwza6Yz5cxdfRskR6RIza1MhD6duSHeY3EMfQPUys5eyVWGzr7AZ3b9-A7SqiR4exwuzlsl6nSUrCWg2mcTs4d2AUweL-ta~YwFKvCSnu74nMRW3PVUlcymrv~UUnPjmiqqpTeA07seRA__">
         <div id="container">
             <p>Converter <b>de</b></p>
-            <select class="currency-to-convert">
+            <select class="currency-to-convert" id="select-one">
                 <option value="real">R$ Real Brasileiro</option>
                 <option value="dolar">$ Dólar Americano</option>
                 <option value="euro">€ Euro</option>
@@ -25,7 +25,7 @@
             </select>
 
             <p>Converter <b>para</b></p>
-            <select class="currency-select">
+            <select class="currency-select" id="select-two">
                 <option value="dolar">$ Dólar Americano</option>
                 <option value="euro">€ Euro</option>
                 <option value="libra">£ Libra</option>
@@ -35,21 +35,24 @@
 
             <p><b>Valor</b></p>
             <input id="input-currency" placeholder="R$ 10.000,00">
-            <br>
+            
+
             <button id="convert-button">CONVERTER</button>
+
+            
             <section>
                 <div class="currency-box">
-                    <img src="./assets/brasil.png" alt="logo-país" class="flags" id="currency-img-to-convert">
-                    <p class="cash-name-to-convert">Real</p>
-                    <h2 class="currency-value-to-convert">R$ 0,00</h2>
+                    <img src="./assets/brasil.png" alt="logo-país" class="flags" id="img-select-one">
+                    <p class="cash-name-to-convert" id="currency-name-one">Real</p>
+                    <h2 class="currency-value-to-convert" id="currency-value-one">R$ 0,00</h2>
                 </div>
 
                 <img src="./assets/seta.png" id="seta">
                 
                 <div class="currency-box">
-                    <img src="./assets/estados-unidos.png" alt="logo-país" class="flags" id="currency-img">
-                    <p class="cash-name-converted">Dólar Americano</p>
-                    <h2 class="currency-value">$ 0,00</h2>
+                    <img src="./assets/estados-unidos.png" alt="logo-país" class="flags" id="img-select-two">
+                    <p class="cash-name-converted" id="currency-name-two">Dólar Americano</p>
+                    <h2 class="currency-value" id="currency-value-two">$ 0,00</h2>
                 </div>
             </section>
         </div>
